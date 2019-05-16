@@ -1,0 +1,44 @@
+{
+  "name": "dropqueue",
+  "version": "0.1.0",
+  "description": "A simple web scraping job queue",
+  "author": "Nate Kohari",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.1",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "concurrently": "^4.1.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
+  "jest": {
+    "testMatch": [
+      "**/*.tests.+(ts|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|js)$": "ts-jest"
+    }
+  },
+  "scripts": {
+    "setup": "for package in 'api' 'worker'; do cp packages/$package/env.sample packages/$package/.env; done",
+    "dev": "concurrently \"yarn dev-api\" \"yarn dev-worker\"",
+    "dev-api": "yarn workspace @dropqueue/api dev",
+    "dev-worker": "yarn workspace @dropqueue/worker dev",
+    "test": "jest"
+  }
+}

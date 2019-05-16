@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "baseUrl": ".",
+    "strict": true,
+    "sourceMap": true,
+    "paths": {
+      "@dropqueue/*": ["packages/*/src"]
+    }
+  }
+}

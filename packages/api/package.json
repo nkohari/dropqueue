@@ -1,0 +1,21 @@
+{
+  "name": "@dropqueue/api",
+  "version": "0.1.0",
+  "description": "A simple web scraping job queue",
+  "author": "Nate Kohari",
+  "license": "MIT",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/hapi": "^18.0.2",
+    "@types/joi": "^14.3.3",
+    "@types/node": "^12.0.2",
+    "dotenv": "^8.0.0",
+    "hapi": "^18.1.0",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon | bunyan",
+    "start": "ts-node ./src/index.ts"
+  }
+}
