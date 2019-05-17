@@ -3,9 +3,9 @@ dotenv.config();
 
 import * as cluster from 'cluster';
 import { createLogger, RedisDatabase } from '@dropqueue/common';
-import { readConfigFromEnvironment } from './config';
 import { ClusterManager } from './ClusterManager';
 import { ClusterWorker } from './ClusterWorker';
+import { readConfigFromEnvironment } from './Configuration';
 import { createJobHandler } from './createJobHandler';
 
 const config = readConfigFromEnvironment();

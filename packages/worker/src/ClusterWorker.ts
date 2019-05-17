@@ -1,5 +1,5 @@
 import { Database, Job, Logger } from '@dropqueue/common';
-import { Configuration } from './config';
+import { Configuration } from './Configuration';
 
 export class ClusterWorker {
   config: Configuration;

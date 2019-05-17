@@ -1,6 +1,6 @@
 import * as cluster from 'cluster';
 import { Logger } from '@dropqueue/common';
-import { Configuration } from './config';
+import { Configuration } from './Configuration';
 
 export class ClusterManager {
   config: Configuration;

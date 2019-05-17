@@ -1,7 +1,7 @@
 import { Server } from 'hapi';
 import { Database, Logger } from '@dropqueue/common';
-import { Configuration } from './config';
-import { HandlerClass } from './HandlerClass';
+import { Configuration } from './Configuration';
+import { HandlerClass } from './Handler';
 import * as handlers from './handlers';
 
 export class ApiServer {

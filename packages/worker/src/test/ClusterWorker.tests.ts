@@ -1,6 +1,6 @@
 import { Job, JobStatus, MockDatabase, MockLogger } from '@dropqueue/common';
-import { Configuration } from '../config';
 import { ClusterWorker } from '../ClusterWorker';
+import { Configuration } from '../Configuration';
 
 const config: Configuration = {
   redisUrl: '',

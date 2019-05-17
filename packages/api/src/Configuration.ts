@@ -1,5 +1,10 @@
 import { readConfig } from '@dropqueue/common';
-import { Configuration } from './Configuration';
+
+export interface Configuration {
+  baseUrl: string;
+  port: number;
+  redisUrl: string;
+}
 
 export function readConfigFromEnvironment(): Configuration {
   return {

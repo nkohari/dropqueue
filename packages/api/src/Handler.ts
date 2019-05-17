@@ -1,6 +1,10 @@
 import { Request, ResponseToolkit, RouteOptionsValidate } from 'hapi';
 import { Database, Logger } from '@dropqueue/common';
-import { Configuration } from './config';
+import { Configuration } from './Configuration';
+
+export interface HandlerClass {
+  new (config: Configuration, database: Database, log: Logger): Handler;
+}
 
 export abstract class Handler {
   config: Configuration;

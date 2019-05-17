@@ -3,7 +3,7 @@ dotenv.config();
 
 import { createLogger, RedisDatabase } from '@dropqueue/common';
 import { ApiServer } from './ApiServer';
-import { readConfigFromEnvironment } from './config';
+import { readConfigFromEnvironment } from './Configuration';
 
 const config = readConfigFromEnvironment();
 const database = new RedisDatabase(config.redisUrl);

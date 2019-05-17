@@ -1,6 +1,10 @@
 import * as os from 'os';
 import { readConfig } from '@dropqueue/common';
-import { Configuration } from './Configuration';
+
+export interface Configuration {
+  redisUrl: string;
+  workers: number;
+}
 
 export function readConfigFromEnvironment(): Configuration {
   return {

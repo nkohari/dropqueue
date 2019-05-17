@@ -1,7 +1,7 @@
 import { Headers } from 'shot';
 import { MockDatabase, MockLogger } from '@dropqueue/common';
 import { ApiServer } from '../ApiServer';
-import { Configuration } from '../config';
+import { Configuration } from '../Configuration';
 
 type Payload = string | Buffer | object;
 
